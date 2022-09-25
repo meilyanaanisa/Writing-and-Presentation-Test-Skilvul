@@ -89,3 +89,96 @@ git log --online = melihat history dalam satu baris pada git.
 3. **head** Element untuk metadata yang dapat mendefinisikan title, character set, style, scripts, dan metadata informasi lainnya.
 4. **body** Mendefinisikan document pada halaman berupa content seperti heading, paragraph, image, hyperlink, table, dll
 
+### Menjalankan HTML langsung di Visual Studio Code
+Dengan menjalankan html secara langsung memudahkan kita mengetahui perubahan yang kita buat tanpa harus melakukan refresh berkali kali.
+Kita bisa memanfaatkan extension pada Vscode bernama **Live Server**.
+![Live Server](live.png "Live Server")
+
+### Penggunaan Semantik HTML
+Dengan Semantik HTML menjadikan tag lebih user freindly dan gampang di implentasikan. Serta memudahkan dalam pencarian di search engine
+
+- header : Kepala web
+- nav : Membuat Navigasi
+- footer : Bagian kaki web
+- section : Membuat bagian artikel
+- aside : Membuat bagian samping
+- article : Membuat elemen artikel
+
+### Hosting Web Menggunakan Netlify
+1. Mendaftar akun baru, bisa menggunakan akun Github tinggal disambungkan. [link Netlify](https://app.netlify.com/signup?_ga=2.42873893.1254162688.1664112300-1019109604.1664112300 "Hosting Web")
+2. Add A New Project, pastikan repository sudah di push terlebih dahulu di Github.
+3. Authorize Application, Mengizinkan Netlify dan Github saling terhubung.
+4. Memilih repository yang akan di deploy.
+5. Configure Your Setting. pastikan dalam publish direktori dengan publish directory **e.g dist**
+6. Tunggu hingga selesai 
+
+## CSS (Cascading Style Sheet)
+Menambahkan design ke suatu halaman website. Dengan ada css tampilan jauh lebih baik.
+
+### Bagaimana sih menyisipkan css pada HTML
+Ada tiga cara yang dapat dilakukan, yaitu :
+1. Inline CSS, yaitu menggunakan attribute style untuk menyisipkan kode CSS langsung di dalam HTML element.
+```
+ <h1 style="color:blue;">Apa Kabar Dunia?</h1>
+ ```
+2. Internal CSS, yaitu menggunakan element style untuk menyisipkan kode CSS. Element style tersebut diletakkan di dalam element.
+```
+  <style>
+      h1 {
+      background-color: black;
+      }
+    </style> 
+```
+3. External CSS, Kita memiliki dua file: index.html untuk file HTML-nya dan styles.css untuk file CSS-nya.
+```
+<!-- File index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Website Pertamaku</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Website Pertamaku</h1>
+    <p>Selamat Datang</p>
+  </body>
+</html>
+
+/* File styles.css */
+body {
+  background-color: maroon;
+}
+h1 {
+  color: yellow;
+}
+p {
+  color: black;
+}
+```
+### Syntax pada CSS
+Menunjukan atau memilih HTML element mana yang ingin diberi Style. Syntax CSS terdiri dari selector, properties dan value.
+```
+p {
+  color: blue;
+} 
+```
+- p bertindak sebagai selector, element html yang akan dihias.
+- color bertindak sebagai properties, bagian mana yang akan dihias.
+- blue bertindak sebagai nilai, nilai atau berupa hiasan apa yang akan diberikan
+### CSS Responsive
+Membuat tampilan tetap bagus dan rapih di semua device.
+- memberikan instruksi ke browser bagaimana mengatur dimensi lebar dan tinggi halaman tanpa merubah content
+```
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+### Apa itu Flexbox
+Mengatur tampilan tata letak layout pada halaman html.
+
+- Block, memenuhi layout satu baris tanpa memberikan space untuk kata sebelahnya.
+- inline memberikan layout sesuai isi content.
+- display : flex, memberikan tampilan menjadi fleksibel.
+- flex-direction : memberikan arah layout ingin vertical atau horizontal.
+- Justify-content : meluruskan tata letak antar item.
+- align-items : sama halnya dengan justify content dapat menyelaraskan tata letak antar item.
+- flex-container : element utama yang membungkus element didalamnya menjadi fleksibel.
+
