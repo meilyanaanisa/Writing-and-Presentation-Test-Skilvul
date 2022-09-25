@@ -37,9 +37,10 @@ Tujuan utamanya untuk dapat berkelaborasi dengan tim tanpa membuat file yang ban
 1. Download Gitbash melalui [link GIT](https://git-scm.com "silahkan download GIT dahulu")
 2. Buat Akun Github melalui [link GITHUB](https://github.com "Buat akun dulu ya :)")
 3. Melakukan setup awal di git
+```
 git config global user.name "meilyanaanisa"
 git config global user.email meilyanaanisa@gmail.com
-![config username dan useremail!](config.png "config username dan useremail")
+```
 4. git config --list = Check Setup apakah berhasil
 5. git init tugas-01 = Membuat Repository baru
 git init = Membuat Repository dengan folder yang sudah ada dari local penyimpanan
@@ -47,11 +48,13 @@ git init = Membuat Repository dengan folder yang sudah ada dari local penyimpana
 7. git add readme.md = menambahkan file/file yang sudah di rubah ke git
 git add . = menambahkan seluruh file di dalam folder ke git.
 8. git commit -m "message" = menyimpan perubahan pada git.
-![commit file!](commit.png "menyimpan file")
+```
+git commit -m "commit minggu pertama satu"
+```
 9. git remote = menghubungkan repository Github dengan project local pada komputer. 
-![menghubungkan file!](remote.png "menghubungkan file dengan repository")
-
-``$ git remote add origin https://github.com/meilyanaanisa/Writing-and-Presentation-Test-Skilvul.git``
+``` 
+git remote add origin https://github.com/meilyanaanisa/Writing-and-Presentation-Test-Skilvul.git
+```
 10. git push -u origin main = mengirimkan file baru/perubahan kepada repository.
 11. git branch -m main = merubah cabang master menjadi main, apabila sudah Main tidak perlu dirubah.
 12. git log = melihat history perubahan pada git
