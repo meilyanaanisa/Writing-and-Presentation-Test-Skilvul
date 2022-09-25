@@ -41,11 +41,11 @@ Tujuan utamanya untuk dapat berkelaborasi dengan tim tanpa membuat file yang ban
 git config global user.name "meilyanaanisa"
 git config global user.email meilyanaanisa@gmail.com
 ```
-4. git config --list = Check Setup apakah berhasil
-5. git init tugas-01 = Membuat Repository baru
-git init = Membuat Repository dengan folder yang sudah ada dari local penyimpanan
-6. git status = Mengcheck apakah ada perubahan pada file
-7. git add readme.md = menambahkan file/file yang sudah di rubah ke git
+4. git config --list = Check Setup apakah berhasil.
+5. git init tugas-01 = Membuat Repository baru.
+git init = Membuat Repository dengan folder yang sudah ada dari local penyimpanan.
+6. git status = Mengcheck apakah ada perubahan pada file.
+7. git add readme.md = menambahkan file/file yang sudah di rubah ke git.
 git add . = menambahkan seluruh file di dalam folder ke git.
 8. git commit -m "message" = menyimpan perubahan pada git.
 ```
@@ -57,8 +57,35 @@ git remote add origin https://github.com/meilyanaanisa/Writing-and-Presentation-
 ```
 10. git push -u origin main = mengirimkan file baru/perubahan kepada repository.
 11. git branch -m main = merubah cabang master menjadi main, apabila sudah Main tidak perlu dirubah.
-12. git log = melihat history perubahan pada git
+12. git log = melihat history perubahan pada git.
 git log --online = melihat history dalam satu baris pada git.
 13. git checkout = mengembalikan pada versi sebelumnya.
-14. git merge = menyatukan perubahan yang telah dikembangkan pada github
-15. git clone = untuk mengambil repository dari Github
+14. git merge = menyatukan perubahan yang telah dikembangkan pada github.
+15. git clone = untuk mengambil repository dari Github.
+
+## HTML
+
+**HTML (Hyper Text Markup Language)** adalah bahasa komputer yang digunakan untuk membuat kerangka dalam halaman website. Menampilkan konten berupa text, image, video, link. HTML tidak bersifat statis karena menampilkan apa yang diminta oleh programer, dan HTML bukanlah bahasa pemograman sehingga tidak bisa dinamis dalam mengolah data. Ada dua tools yang dibutuhkan dalam pembuatan HTML yaitu:
+- Code Editor : menuliskan semua tag sintax html
+- Browser : Melihat hasil pembuatan html
+
+### Struktur HTML
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+```
+1. **!DOCTYPE html** Mendeklarasikan atau mengidentifikasi jenis HTML yang digunakan pada browser.
+2. **html lang="en"** Mendeklarasikan bahasa halaman web untuk memudahkan pencarian pada search engines dan browser.
+3. **head** Element untuk metadata yang dapat mendefinisikan title, character set, style, scripts, dan metadata informasi lainnya.
+4. **body** Mendefinisikan document pada halaman berupa content seperti heading, paragraph, image, hyperlink, table, dll
+
