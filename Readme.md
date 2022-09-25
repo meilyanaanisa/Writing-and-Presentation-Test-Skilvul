@@ -50,6 +50,8 @@ git add . = menambahkan seluruh file di dalam folder ke git.
 ![commit file!](commit.png "menyimpan file")
 9. git remote = menghubungkan repository Github dengan project local pada komputer. 
 ![menghubungkan file!](remote.png "menghubungkan file dengan repository")
+
+``$ git remote add origin https://github.com/meilyanaanisa/Writing-and-Presentation-Test-Skilvul.git``
 10. git push -u origin main = mengirimkan file baru/perubahan kepada repository.
 11. git branch -m main = merubah cabang master menjadi main, apabila sudah Main tidak perlu dirubah.
 12. git log = melihat history perubahan pada git
