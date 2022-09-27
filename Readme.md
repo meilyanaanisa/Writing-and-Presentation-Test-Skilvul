@@ -4,7 +4,6 @@
 ## UNIX COMMAND LINE
 
 1. **CLI (Command Line Interface)** adalah baris perintah dari user melakukan perintah berbasis teks dengan berinteraksi dengan shell untuk melakukan perintah ke system operasi.
-
 2. **Shell** adalah program berbasis teks antara user dengan system operasi, sebagai penerjemah menerima lalu memproses ke system untuk dieksekusi.
 3. **Terminal** adalah tempat untuk mengetikan perintah teks ke system operasi dan akan diterjemahkan oleh shell.
 4. **File System Structure** adalah penyusunan struktur file dan folder dalam bentuk pohon. contohnya seperti ini :
@@ -97,12 +96,12 @@ Kita bisa memanfaatkan extension pada Vscode bernama **Live Server**.
 ### Penggunaan Semantik HTML
 Dengan Semantik HTML menjadikan tag lebih user freindly dan gampang di implentasikan. Serta memudahkan dalam pencarian di search engine
 
-- header : Kepala web
-- nav : Membuat Navigasi
-- footer : Bagian kaki web
-- section : Membuat bagian artikel
-- aside : Membuat bagian samping
-- article : Membuat elemen artikel
+* header : Kepala web
+* nav : Membuat Navigasi
+* footer : Bagian kaki web
+* section : Membuat bagian artikel
+* aside : Membuat bagian samping
+* article : Membuat elemen artikel
 
 ### Hosting Web Menggunakan Netlify
 1. Mendaftar akun baru, bisa menggunakan akun Github tinggal disambungkan. [link Netlify](https://app.netlify.com/signup?_ga=2.42873893.1254162688.1664112300-1019109604.1664112300 "Hosting Web")
@@ -182,3 +181,203 @@ Mengatur tampilan tata letak layout pada halaman html.
 - align-items : sama halnya dengan justify content dapat menyelaraskan tata letak antar item.
 - flex-container : element utama yang membungkus element didalamnya menjadi fleksibel.
 
+## Algoritma dan Struktur Data
+Algoritma adalah langkah-langkah logis dalam menyelesaikan suatu masalah. Misal dalam pembuatan kopi apa yang harus di lakukan? 
+1. Siapkan kopi, gula, air, gelas dan sendok.
+2. Masak air pada panci diatas kompor hingga mendidih.
+3. Tuang kopi dan tambahkan gula dengan sendok.
+4. Tuang air matang ke dalam gelas.
+5. Aduk hingga rata.
+6. Kopi siap disajikan.
+Langkah diatas adalah sebuah algoritma untuk membuat kopi.
+
+**Kualitas Wajib dari Algoritma**
+- Input dan output harus didefinisikan terlebih dahulu dengan tepat.
+- Setiap step harus benar-benar clear dan tidak ambigu
+- Algoritma seharusnya tidak mengandung suatu code pada bahasa pemograman tertentu. 
+- Algoritma harus dibuat agar dapat digunakan dalam bahasa pemograman apapun.
+
+**Kenapa harus Algoritma**
+- Programming itu adalah algoritma dan struktur data
+- Data struktur digunakan untuk mengelola/manajemen sebuah data
+- Dan Algoritma yang akan menyelesaikan suatu permasalahan menggunakan data tersebut. 
+
+**Data Struktur** adalah untuk mengatur dan memanipulasi data. Dengan memahami struktur data dapat membuat design software lebih baik. Kita harus tau struktur data apa yang digunakan untuk menyelesaikan sebuah permasalahan.
+contoh dari struktur data sebagai berikut :
+- ArrayList
+- HashMap
+- GameBoard.
+
+contohnya seperti ini pembuatan pemograman dengan JavaScript :
+```
+var a,b,c;
+a = prompt("first number?");
+b = prompt("second number?");
+c = Number (a) + Number (b);
+console.log(c);
+alert("result = " + c);
+```
+## JavaScript
+
+Sebuah bahasa pemograman memberikan tampilan website menjadi lebih dinamis.
+Ada dua cara untuk menyisipkan di dalam HTML agar dapat dibaca oleh browser.
+1. **Internal JavaScript** dengan menyisipkan JavaScript langsung di dalam file HTML.
+2. **External JavaScript** yaitu dengan membuat file sendiri dan menyambungkannya dengan HTML.
+
+```
+//Contoh internal
+<script>console.log = ("Selamat Pagi Dunia")</script>
+
+//Contoh External
+<script src ="script.js"></script>
+
+```
+contoh diatas bagaimana kita menyisipkan source file atau mengetikan syntax secara langsung.
+
+mendeklarasikan variabel pada JavaScript ada dua cara yaitu :
+```
+// menggunakan let, dimana nilai variabel bisa diubah
+let namaSaya = "meilyana";
+
+// menggunakan const, dimana nilai variabel tidak bisa di rubah
+const nik = "data karyawan";
+```
+
+Menggunakan JavaScript kita bisa menggunakan tanda akhir **;** atau bisa juga tidak. Menampilkan hasil output JavaScript dengan menggunakan **console.log** dan hasil tidak masuk ke halaman website namun masuk ke tab console sehingga tidak mengganggu tampilan pada website kita.
+
+**Tipe data dasar pada JavaScript**
+
+- Number : Tipe data Angka termasuk angka desimal.
+- String : Karakter yang di bungkus dengan tanda petik.
+- Boolean : Tipe data dengan memiliki dua nilai yaitu True dan False.
+- Null : Tipe data yang tidak memiliki nilai.
+Undifined : Tipe data tidak memiliki nilai dan tidak memiliki variabel.
+- Object : Sebuah koleksi penyimpanan data baik berupa string, number, boolean, dll.
+
+**Aritmatika Operator**
+Perhitungan matematika melibatkan operasi Matematika
+- **Tambah (+)**
+```
+let bilsatu = 5;
+hasil = bilsatu + 10;
+
+console.log (hasil); // maka hasilnya 15
+```
+
+- **Pengurangan (-)**
+```
+let bilsatu = 5;
+bilsatu -= 10;
+
+console.log (bilsatu); // maka hasilnya -5
+```
+- **Perkalian (*)** dilambangkan dengan tanda bintang
+
+```
+console.log (5*5); // maka hasilnya 25
+```
+- **Pembagian (/)** dilambangkan dengan garis miring
+```
+let bilsatu = 30;
+bilsatu /= 10;
+
+console.log (bilsatu); // maka hasil menjadi 3
+```
+- **Modulus (%)** Hasil dari sisa pembagian
+```
+let bilsatu = 30;
+bilsatu %= 10;
+
+console.log (bilsatu); // sisa pembagian adalah 0
+```
+
+**Conditional**
+Sebuah kondisi perintah yang menjalan apakah bernilai benar atau salah atau biasa disebut dengan ***statement percabangan***.
+- **if else**
+```
+let korea = true;
+
+if (korea){
+console.log('Annyeonghaseo');
+}else{
+console.log('Hello');
+}
+```
+
+- **Truthy and Falsy**
+Mengecek variabel sudah terisi atau belum namun tidak mementingkan nilainya.
+```
+let dataName;
+if (username) {
+dataName = username;
+}else{
+dataName = 'stranger';
+}
+```
+
+- **Switch case**
+Digunakan saat kondisi percabangan terlalu banyak, maka semua kondisi akan dieksekusi sampai nilai sudah tidak terpenuhi.
+
+```
+let arg = prompt("Enter a value?");
+switch (arg) {
+  case '0':
+  case '1':
+    alert( 'One or zero' );
+    break;
+
+  case '2':
+    alert( 'Two' );
+    break;
+
+  case 3:
+    alert( 'Never executes!' );
+    break;
+  default:
+    alert( 'An unknown value' );
+}
+```
+- **Ternary Operator**
+Syntax singkat untuk sebuah conditinal if
+```
+let hewan = 'kucing';
+kucing ? console.log('hewan lucu') : console.log('bukan kucing');
+```
+**Looping**
+Sebuah perulangan yang dikerjakan sampai kondisinya terpenuhi maka akan stop eksekusi.
+
+- **For Loop**
+perulangan yang sudah diketahui sudah tahu pasti berapa banyak nilai perulangan.
+
+```
+let nilai = 1;
+for (nilai=i; i<=15; i++){
+  console.log(i);
+}
+```
+- **While Loop**
+Sebuah perulangan dimana tidak diketahui jumlah pasti nilai pengulangannya.
+```
+let angka = 1;
+while(angka<=10){
+  console.log(angka);
+  angka++;
+}
+```
+- **Do WHile**
+Perulangan terjadi sebelum mengecek kondisi
+```
+let keinginan = '3';
+while(keinginan > 5){
+  console.log('Aku Lapar Sekali');
+  keinginan--;
+}
+
+do {
+  console.log('Aku Bingung');
+  keinginan--;
+}while(keinginan>5)
+```
+
+Markdown ini dibuat oleh
+<meilyanaanisa@gmail.com>
