@@ -372,7 +372,6 @@ while(keinginan > 5){
   console.log('Aku Lapar Sekali');
   keinginan--;
 }
-
 do {
   console.log('Aku Bingung');
   keinginan--;
