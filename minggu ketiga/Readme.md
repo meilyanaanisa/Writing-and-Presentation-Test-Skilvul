@@ -273,7 +273,7 @@ for(let key in object){
 
 };
 ```
-- Array of Object
+**Array of Object**
 menyimpan data lebih dari satu dalam bentuk array.
 
 ## JavaScript Modules
