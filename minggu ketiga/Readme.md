@@ -261,10 +261,13 @@ console.log(greeting.welcome());
 ```
 **Nested Object**
 Object kompleks yang berasal dari turunan object lainnya.
+
 **Pass By References**
 Mengubah data object melalui function dan memasukkan sebagai parameter function
+
 **Looping object**
 Menampilkan seluruh object properti
+
 ```
 for(let key in object){
 
