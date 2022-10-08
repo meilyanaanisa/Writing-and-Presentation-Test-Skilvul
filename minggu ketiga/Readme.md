@@ -331,4 +331,119 @@ console.log(2) // 1
 ```
 
 ## JavaScript Asynchronous
-Proses antrian dibaca dari atas ke bawah. Sedangkan Asynchronous memblocking sebuah operasi yang sedang berjalan. Dan hal ini dapat mempermudah user dalam berinteraksi dengan website kita.  
+Scynchronous melakukan eksekusi secara berurutan dari atas ke bawah. 
+
+Sedangkan Asynchronous, mengeksekusi tanpa menunggu eksekusi kode selesai
+
+contoh simulasi
+```
+console.log('Hi Brachio');
+
+setTimeout(function () {
+  console.log('the time has come');
+}, 3000);
+
+console.log('to learn how to code');
+```
+
+makasih hasil code
+```
+Hi Brachio
+to learn how to code
+the time has come
+```
+
+**Event Loop**
+Runtime yang bertugas menangani Event Callback. Pengeksekusian setelah event tertentu
+
+- Callback, fungsi menjadi argument untuk fungsi lain dan dieksekusi pada point tertentu.
+```
+const notify = () => {
+  console.log('Download complete!');
+};
+
+const download = (url, callback) => {
+  console.log(`Downloading from ${url}....`);
+
+  callback();
+};
+
+const url = 'https://brachio.site/download';
+
+download(url, notify);
+```
+
+**Promise**
+Sebagai object yang menyimpan hasil dari sebuah operasi asynchronous baik itu hasil yang diinginkan(resolved value) atau alasan kenapa operasi itu gagal (failure resons)
+
+keyword untuk membuat promise:
+```
+let progress = 100;
+
+const download = new Promise((resolve, reject) => {
+  if (progress === 100) {
+    resolve('Download complete');
+  } else {
+    reject('Download failed');
+  }
+});
+```
+
+**Async Await**
+Diperkenalkan di ES8/ES2017 untuk menghandle asynchronous dengan syntax yang lebih mirip synchronous.
+
+contoh simulasi
+```
+const getStatus = (url) => {
+  console.log(`Downloading from ${url}...`);
+
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Download Complete');
+    }, 3000);
+  });
+};
+
+async function download(url) {
+  let status = await getStatus(url); // tunggu sampai promise selesai
+  console.log(status);
+}
+
+const url = 'https://brachio.site/download';
+
+download(url);
+```
+
+**Asynchronous-Fetch**
+Mengakses dan memanipulasi bagian protocol, seperti request dan respons.
+```
+fetch('http://example.com/movies.json')
+  .then((response) => response.json())
+  .then((data) => console.log(data));
+```
+
+**HTTP**
+> Hypertext Transfer Protocol
+
+adalah sebuah Client-Server protocol. mengambil sumber daya seperti HTML Document. Sebuah fondasi pertukaran data antara web dan client-server
+
+**Bassic Aspek HTTP**
+
+- HTTP itu simple didesign menjadi simple dan mudah digunakan oleh user
+- HTTP Extensible fungsi baru yang dapat memperkenalkan simpel penilaian antara klien dan server
+
+ - HTTP Method :
+   - GET digunakan untuk meminta data dari sumber tertentu
+   - POST digunakan untuk mengirim data ke server untuk membuat/memperbarui resource
+   - PUT digunakan untuk mengirim data ke server untuk membuat/memperbarui resource.
+   - DELETE untuk menghapus spesifiksi resource
+
+   **API**
+   > Application Programming Interface
+
+   dibuat untuk mengizinkan programmer untuk membuat fungsi menjadi lebih mudah.
+
+   apa yang dilakukan API
+- Memanipulasi dokument
+- API mengambil data dari server
+- API untuk menggambar dan memanipulasi grafik
