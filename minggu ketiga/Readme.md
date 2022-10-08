@@ -236,7 +236,7 @@ people = {
 console.log(hewan);
 // output error
 ```
-**Menghapus propertie dari object menggunakan delete operator**
+**Menghapus properti dari object menggunakan delete operator**
 ```
  let hewan = {
     nama: "kucing",
@@ -259,11 +259,11 @@ const greeting = {
 
 console.log(greeting.welcome());
 ```
-- Nested Object
+**Nested Object**
 Object kompleks yang berasal dari turunan object lainnya.
-- Pass By References
+**Pass By References**
 Mengubah data object melalui function dan memasukkan sebagai parameter function
-- Looping object
+**Looping object**
 Menampilkan seluruh object properti
 ```
 for(let key in object){
