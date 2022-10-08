@@ -120,6 +120,159 @@ let doubled = arr.map(num => {
 });
 console.log(doubled);
 ```
+**Multidimensional Array**
+Didefiniskan sebagai Array di dalam Array
+```
+let hewan = [
+    ["kucing","kelinci","ayam"],
+    ["burung","capung","kelelawar"],
+    ["angsa","buaya","katak"],
+];
+
+console.log(hewan);
+```
+- mengakses dimensional array, didefiniskan seperti matrix (x,y). X sebagai isi data array dan Y sebagai jumlah array.
+```
+let hewan = [
+    ["kucing","kelinci","ayam"],
+    ["burung","capung","kelelawar"],
+    ["angsa","buaya","katak"],
+];
+
+console.log(hewan[1][2]);
+```
+
+**Akses Multidimensional Array**
+Terdapat property dan method built-in method
+
+- menggunakan operasi .map
+```
+let inventory = [
+    ['Kaos Polos' , 10],
+    ['Jaket' , 5],
+    ['Topi' , 12],
+    ['Celana' , 4],
+];
+inventory.map(dataInventory => {
+    let terjual = 100 - dataInventory[1];
+    dataInventory[2] = terjual;
+});
+console.table(inventory);
+```
+- Looping Mutidimesional Array
+```
+let inventory = [
+    ['Kaos Polos' , 10],
+    ['Jaket' , 5],
+    ['Topi' , 12],
+    ['Celana' , 4],
+];
+inventory.forEach((baris) => {
+    baris.forEach((column) => {
+        console.table(column);
+    });
+});
+```
+
+## JavaScript Object
+Sebuah type data yang menyimpan properti dan fungsi(method) didalam variabel.
+- properti, data lengkap dari sebuah object
+- method, aksi dari sebuah object
+
+**Membuat sebuah object**
+```
+let hewan = {
+    nama: "kucing",
+    usia: 2,
+};
+```
+
+**Mengakses sebuah object**
+```
+let hewan = {
+    nama: "kucing",
+    usia: 2,
+};
+console.log(hewan);
+```
+**Mengakses properti object dot notion**
+```
+let hewan = {
+    nama: "kucing",
+    usia: 2,
+};
+console.log(hewan.nama);
+```
+**Mengakses properti object bracket**
+```
+let hewan = {
+    nama: "kucing",
+    usia: 2,
+};
+console.log(hewan["nama"]);
+```
+**Update Object**
+
+- Object dapat mengupdate value dari key yang sudah tersedia
+- Object dapat menambahkan key dan value baru
+```
+ let hewan = {
+    nama: "kucing",
+    usia: 2,
+};
+
+hewan.jenis = "betina";
+console.log(hewan);
+```
+- jangan menggunakan constant pada variabel object. kita tidak bisa mengganti seluruh data dengan object baru.
+```
+ let hewan = {
+    nama: "kucing",
+    usia: 2,
+};
+people = {
+    fullname: "Ucilina"
+}
+console.log(hewan);
+// output error
+```
+**Menghapus propertie dari object menggunakan delete operator**
+```
+ let hewan = {
+    nama: "kucing",
+    usia: 2,
+};
+
+delete hewan.usia;
+console.log(hewan);
+```
+**Membuat custom method**
+```
+const greeting = {
+    welcome: function (){
+        return 'Halo Selamat Datang';
+    },
+    afterTransaction: function (){
+        return 'Terima Kasih';
+    },
+};
+
+console.log(greeting.welcome());
+```
+- Nested Object
+Object kompleks yang berasal dari turunan object lainnya.
+- Pass By References
+Mengubah data object melalui function dan memasukkan sebagai parameter function
+- Looping object
+Menampilkan seluruh object properti
+```
+for(let key in object){
+
+};
+```
+- Array of Object
+menyimpan data lebih dari satu dalam bentuk array.
+
 ## JavaScript Modules
 
 Sebuah Js modules adalah cara untuk memaintance kode dengan file kode yang berbeda.
