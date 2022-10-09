@@ -427,7 +427,7 @@ fetch('http://example.com/movies.json')
 
 adalah sebuah Client-Server protocol. mengambil sumber daya seperti HTML Document. Sebuah fondasi pertukaran data antara web dan client-server
 
-**Bassic Aspek HTTP**
+**Basic Aspek HTTP**
 
 - HTTP itu simple didesign menjadi simple dan mudah digunakan oleh user
 - HTTP Extensible fungsi baru yang dapat memperkenalkan simpel penilaian antara klien dan server
@@ -447,3 +447,33 @@ adalah sebuah Client-Server protocol. mengambil sumber daya seperti HTML Documen
 - Memanipulasi dokument
 - API mengambil data dari server
 - API untuk menggambar dan memanipulasi grafik
+
+## Web Storage
+Tempat penyimpanan/merekam data pengguna seperti pencarian, artikel berita dan lain lain ke local (browser) dengan menggunakan web storage seperti :
+- cookies
+Adalah data kecil yang dikirim situs web browser ke komputer saat menjelajah.
+  
+  - hanya memiliki ukuran max 4096 bytes (4KB)
+  - menyimpan access token pengguna atau data pencarian saat menjelajah situs web
+  - memiliki tanggal kadaluarsa
+
+- local storage
+
+  local storage memiliki karakteristik sebagai berikut:
+  
+  - Menyimpan tanpa tanggal kadaluarsa
+  - Data tidak akan menghapus hasil pencarian bahkan ketika web browser ditutup, dan akan terus tersedia seterusnya selama kita tidak menghapus data local storage pada web browser
+  - Dapat menyimpan hingga 5MB
+  - Type Data yang disimpan hanya berupa String
+  - setItem() untuk menyimpan data ke local storage
+  - getItem() untuk mengambil data dari local storage
+  - removeItem() untuk menghapus data yang tersimpan di local storage
+- session storage
+Data yang tersimpan akan hilang apabila session dari sebuah laman berakhir.
+Memiliki karakteristik sebagai berikut :
+  
+  - Data akan terus tersimpan selama web browser terbuka.
+  - Membuka banyak tab dengan url yang sama akan menyimpan session storage berbeda dimasing - masing tab.
+  - Menutup tab akan menghapus data pada session storage.
+  - Type data yang tersimpan hanya berbentuk string
+  - Menyimpan data sebanyak 5MB 
