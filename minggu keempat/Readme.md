@@ -2,6 +2,79 @@
 
 ## Fetch Asynchronous 
 
+Proses pengambilan data melalui rest-api.
+
+Proses request
+> clien server > server > database
+
+Hasil respond
+> data > server > web
+
+Hasil data respond dalam bentuk Json (JavaScript Object Notation).
+Json memiliki ciri khas di setiap properti memiliki tanda petik.
+
+Contohnya seperti ini
+![Bentuk Json!](json.png "Contoh Json")
+
+Agar tampilan rapih seperti diatas maka harus menginstall ekstension **Json Formater** pada web browser.
+
+- object promise yang sudah disediakan oleh javascript yaitu Fetch.
+
+- Dua cara menangkap fetch
+- .then .catch
+- async await
+
+- menangkap fetch dengan then catch
+```
+fetch("link") 
+.then(result => {
+console.log(result);
+return result.json()
+})
+.then(result => {
+console.log(result)
+})
+.catch(err => {
+console.log(err)
+})
+```
+
+- Fetch menggunakan async await
+```
+let getDataDigimon = async () => {
+let response = await fetch("link")
+let result = await respond.json ()
+console.log(result);
+}
+
+getDataDigimon()
+```
+
+- harus selalu menambahkan syntax script di html
+```
+<script src ="script.js"  defer ></script>
+```
+- menampilkan data dengan DOM JavaScript.
+
+apabila data dalam bentuk array, maka harus di looping dahulu.
+```
+let containerDigimon = document.getElementById("list-digimon")
+
+let getDataDigimon = async () => {
+  let response = await fetch ("link")
+  let digimons = await response.json ()
+
+  digimons.forEach (item =>{
+    containerDigimon.innerHTML +=
+    `
+    <div>
+    ${item.nama}
+    </div>
+    `
+  })
+}
+```
+
 ## Responsive Web Design
 
 Responsive web design (RWD) digunakan untuk agar website kita dapat diakses oleh banyak device tanpa mengurangi atau mengubah konten didalamya.
@@ -185,4 +258,3 @@ Terdapat 3 container pada bootstrap :
     - .col-sm digunakan untuk mengatur grid pada ukuran monitor tablet.
     - .col-xs digunakan untuk mengatur grid pada ukuran monitor handphone
 
-    
