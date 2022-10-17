@@ -1,4 +1,7 @@
 # Rangkuman Minggu Keempat Skilvul
+
+## Fetch Asynchronous 
+
 ## Responsive Web Design
 
 Responsive web design (RWD) digunakan untuk agar website kita dapat diakses oleh banyak device tanpa mengurangi atau mengubah konten didalamya.
@@ -100,3 +103,86 @@ Membuat pull requet untuk mendapatkan feedback atau perubahan yang dibuat. Pull 
 
 Apabila membuat pull request bersamaan dengan ringkasan tentang isi perubahan. Kita bisa menambahkan gambar, link dan tabel untuk membantu menyampaikan isi informasi.
 
+## Bootstrap 5
+Membuat sebuah web responsive menjadi lebih mudah dengan bootstrap.
+
+- Penggunaan Bootstrap
+Membuat file HTML dan memasukkan syntax dibawah didalam tag head. 
+```
+<meta name="viewport">
+```
+- Komponen utama bootstrap
+
+Memasukkan Bootstrap css di dalam tag head
+```
+	https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css
+```
+    
+Memasukkan Bootstrap JavaScript di dalam tag script pada tag body
+```
+	https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js
+```
+
+- Komponen bootstrap sebagian besar dibangun dengan base-modifier nomenclature. Dengan mengelompokkan beberapa properti kelas dasar seperti .btn
+contoh : .btn-primary atau btn-success
+
+- Penggunaan theme color pada bootstrap dapat menggunakan keyword sebagai berikut :
+```
+$theme-colors: (
+"primary":    $primary,
+"secondary":  $secondary,
+"success":    $success,
+"info":       $info,
+"warning":    $warning,
+"danger":     $danger,
+"light":      $light,
+"dark":       $dark
+);
+```
+
+- Kapan kita menggunakan bootstrap
+    
+    - Menggunakan bootstrap sendiri saat membuat website sederhana tanpa memerluka load lama.
+
+- Layout pada bootstrap
+
+    - Breakpoints adalah salah satu cara dilakukan membuat design responsive dengan mengontrol tata letak disesuaikan dengan ukuran perangkat tertentu.
+
+        - Ukuran breakpoint ada lima yaitu : sm, md, xl dan xxl.
+        - Setiap breakpoint dipilih untuk menampung container yang lebarnya adalah 12 sehingga tersusun rapi. Breakpoint mewakili ukuran perangkat umum
+
+- Container, blok dasar atau pembungkus bootstrap yang terdiri dari contain, pad dan align yang menyelaraskan konten website dalam perangkat tertentu.
+Terdapat 3 container pada bootstrap :
+
+    - .container, lebar maksimum pada setiap breakpoint responsive
+    - .container-{breakpoint}, lebar 100% sampai dengan breakpoint yang ditentukan.
+    - .container-fluid, menerapkan 100% ukuran dari breakpoint
+
+- Grid System, memiliki 12 kolom default
+- Grid System menggunakan container, baris dan kolom untuk menata dan menyelaraskan konten, yang dibangun menggunakan flexbox dan itu sudah responsive.
+
+- Penggunaan grid system
+```
+  <div class="container text-center">
+  <div class="row">
+   <div class="col">
+     Column
+   </div>
+   <div class="col">
+     Column
+   </div>
+   <div class="col">
+     Column
+   </div>
+  </div>
+  </div>
+```
+
+- Grid system bootstrap :
+
+    - .col-lg digunakan untuk mengatur grid pada ukuran monitor besar.
+    - .col-md digunakan untuk mengatur grid pada ukuran monitor medium.
+    - .col-sm digunakan untuk mengatur grid pada ukuran monitor tablet.
+    - .col-xs digunakan untuk mengatur grid pada ukuran monitor handphone
+
+    
