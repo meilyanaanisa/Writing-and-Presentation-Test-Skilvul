@@ -100,4 +100,10 @@ export default perkenalan;
   - Guanakn function
   - Gunakan class
 
--
+
+
+- State dan Props adalah hal yang berhubungan dengan Stateless dan Stateful Component
+- Stateless berarti tidak memiliki State. Dia hanya memiliki props.
+- Stateful berarti memiliki state dan bisa mengirim tersebut ke component.
+- Jadi state adalah data lokal
+- Props digunakan agar component memiliki data yang dinamis yang dikirim dari component lain.
