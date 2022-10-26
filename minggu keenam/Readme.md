@@ -91,3 +91,13 @@ function perkenalan (){
 
 export default perkenalan;
 ```
+## Component 
+
+- Component adalah salah satu core React Js yang dapat membagi UI dalam satuan-satuan kecil.
+- Misal : didalam HTML terdapat navbar, form, text title. Mereka disebut component
+- Ada dua cara membuat component
+
+  - Guanakn function
+  - Gunakan class
+
+-
