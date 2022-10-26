@@ -65,12 +65,12 @@ let getDataDigimon = async () => {
   let digimons = await response.json ()
 
   digimons.forEach (item =>{
-    containerDigimon.innerHTML +=
-    `
-    <div>
-    ${item.nama}
-    </div>
-    `
+      containerDigimon.innerHTML +=
+      `
+      <div>
+      ${item.nama}
+      </div>
+      `
   })
 }
 ```
