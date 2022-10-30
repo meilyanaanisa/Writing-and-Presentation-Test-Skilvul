@@ -66,20 +66,6 @@ export default perkenalan;
 import React from 'react';
 
 function perkenalan (){
-    return{
-        <div>
-        <h1>{1 + 2}</h1>
-        </div>
-    }
-}
-
-export default perkenalan;
-```
-- Akses variabel menggunakan curly braces
-```
-import React from 'react';
-
-function perkenalan (){
     const nama = 'meilyana'
     return{
         <div>
@@ -146,12 +132,125 @@ export default App;
 - Jadi state adalah data lokal
 - Props digunakan agar component memiliki data yang dinamis yang dikirim dari component lain.
 
-
-Usestate: penyimpanan data yang berubah - ubah
+- UseState: penyimpanan data yang berubah - ubah
 > const [name, setName] = useState("Meilyana");
 
+## React Js Hooks
+
+- Hooks adalah fitur baru yang baru dikenalkan di ReactJs pada tahun 2018.
+
+- Hooks bertujuan untuk memudahkan penggunaan functional components agar bisa menggunakan state, dan lifecycle lainnya.
+
+- Hooks yang sering digunakan adalah useState dan useEffect dua hal ini sama dengan state dan lifecycle di class yang biasa kita sering gunakan.
 
 - Mount, memunculkan tampilan.
 - Unmount, menghilangkan tampilan
 - Update, terjadi perubahan pada data
 - useeffect memberikan effect samping di dalam life cycle
+
+**Perbedaan functional component dengan class component.**
+
+- Class Component
+```
+class component extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = { nama : "Meilyana"};
+    }
+    render(){
+        return <h1>Hallo,{this.state.nama}</h1>
+    }
+}
+```
+- Functional Component
+```
+import { useState } from "react";
+
+function App() {
+    const [nama, setNama] = useState("Meilyana");
+
+    return <h1>Halo, {nama}</h1>;
+}
+```
+- Kelebihan Penggunaan Hooks
+
+Penggunaan hook sangat di rekomendasikan dikarenakan penggunaan hook lebih mudah dimenegerti serta code jauh lebih clean, pendek dan mudah dimengerti
+
+- Pengertian useState
+
+pengertian useState sendiri sama seperti state biasa yang membedakan penggunaan useState berbeda dengan setState/state di class component.
+
+- useState syntac structure
+ > const [nama, setnama] = useState ("Meilyana");
+
+- Penggunaan useState
+```
+import { useState } from "react";
+
+function App() {
+    const [nama, setNama] = useState("Meilyana");
+
+    return(
+        <>
+        <p>Halo, saya{nama}</p>
+        <button onClick={() => setNama("Intan")}></button>
+
+        </>
+    )
+}
+```
+- Array dalam useState Hooks
+
+Menggunakan tanda [] dalam useState untuk menandakan bahwa state tersebut merupakan array
+> const [nama, setnama] = useState ([]);
+
+- Penggunaan useState hooks
+
+useState, biasanya akan digunakan saat kamu menyimpan data suatu form yang nantinya akan di post ke api untuk diproses
+
+dan kita dapat melakukan call api, kita bisa menyimpan data hasil get dari api tersebut kedalam state menggunakan useState
+
+- Pengertian useEffect hooks
+
+hooks yang bisa digunakan untuk menggunakan lifecycle pada functional component dengan mudah.
+
+- Pengertian lifecycle
+
+proses perulangan data di dalam komponen yang menyatukan componentDidMount, componentDidUpdate, dan componentWillUnmount.
+
+- Penggunaan useEffect
+
+Dapat dilakukan sebelum render, useEffect sendiri biasanya ditempatkan dibawah useState.
+
+useEffect akan dijalankan setiap component baru di mount ( componentDidMount ), terjadi perubahan ( componentDidUpdate ), dan pada saat component akan ditinggalkan ( componentWillUnmount )
+
+**Penggunaan useEffect**
+
+```
+import { useEffect, useState } from "react";
+
+function App() {
+    const [nama, setNama] = useState(true);
+
+
+    useEffect(() => {
+        console.log("ada perubahan");
+
+    }, [nama]);
+
+    return (
+        <>
+        <h1>Perubahan : {nama}</h1>;
+        <button onClick={() => setNama (!nama)}>Ubah</button>
+        </>
+     )
+}
+```
+
+- Menghindari re-render yang berlebihan
+
+Menambahkan [] atau [**variabelYangBerubah**] untuk menentukan bahwa useEffect berjalan saat terjadi update
+
+- Penggunaan useEffect hooks
+
+Pada saat penggunaan suatu call api, karena api akan selalu dipanggil saat komponen terbentuk, maka call api bisa dilakukan didalam useEffect
