@@ -97,13 +97,61 @@ export default perkenalan;
 - Misal : didalam HTML terdapat navbar, form, text title. Mereka disebut component
 - Ada dua cara membuat component
 
-  - Guanakn function
+  - Gunakan function
   - Gunakan class
-
-
 
 - State dan Props adalah hal yang berhubungan dengan Stateless dan Stateful Component
 - Stateless berarti tidak memiliki State. Dia hanya memiliki props.
+
+```
+const Member = (props, nameColor) => {
+  
+    return(
+    <div className="container">
+        
+    <div className='com-profile'>
+        <h1>Profile</h1>
+            <div className="picture-profile" >
+                <img src="https://ps.w.org/metronet-profile-picture/assets/icon-128x128.png?rev=2464419" alt="" className='profil-picture'/>
+            <div className="ket-profile">
+                <h3 style={{ color: nameColor}}>{props.name}</h3>
+                 <p>{props.age}</p>
+                <p>{props.info}</p>
+            </div>
+            </div>
+        </div>
+    </div>
+    );
+}
+
+export default Member;
+```
 - Stateful berarti memiliki state dan bisa mengirim tersebut ke component.
+```
+import './App.css';
+import Member from './component/Member.jsx';
+
+function App() {
+  return (
+      <div
+      <Member name={'Putri Ramadani'} age={'16'} info={'Siswi SMP'} nameColor={"yellow"}/>
+
+      <Member name={'Meilyana Anisa Mawarti'} age={'22'} info={'Mahasiswi'}/>
+      </div>
+  );
+}
+
+export default App;
+```
 - Jadi state adalah data lokal
 - Props digunakan agar component memiliki data yang dinamis yang dikirim dari component lain.
+
+
+Usestate: penyimpanan data yang berubah - ubah
+> const [name, setName] = useState("Meilyana");
+
+
+- Mount, memunculkan tampilan.
+- Unmount, menghilangkan tampilan
+- Update, terjadi perubahan pada data
+- useeffect memberikan effect samping di dalam life cycle
