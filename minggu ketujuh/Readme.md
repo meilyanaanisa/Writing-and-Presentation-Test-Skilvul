@@ -114,7 +114,7 @@ export default aboutPage;
 - Menjalankan react-redux
 > npm install react-redux
 
-- Import provider ke dalam main.jsx. Agar redux dapat digunakan di seluruh component
+- Import provider ke dalam main.jsx. component yang memberikan akses ke store.
 > import { Provider } from 'react-redux'
 
 - Kenapa kita harus menggunakan react-redux
@@ -163,3 +163,53 @@ export default aboutPage;
   ```
 
 ## React-Redux-Thunk
+
+- Sebuah middleware yang memungkinkan kita menulis function yang dapat berinteraksi dengan redux store.
+
+- install package redux-thunk
+> npm install redux-thunk
+
+- update Redux store agar dapat menggunakan middleware
+> import thunk from 'redux-thunk'
+
+- import applyMiddleware
+> import { createStore, applyMiddleware } from 'redux';
+
+<!-- - Action creators
+```
+conts store = createStore(combineReducers) {
+  return {
+    todos: todosReducers,
+    counter: counterReducers
+  };
+  applyMiddleware(logger, thunk)
+}
+``` -->
+
+- memulai menggunakan redux-thunk
+```
+store.dispatch(dispatch => {
+  dispatch({ type: "FETCH_LOADING"});
+
+  fetch("link json")
+  .then (res => res.json())
+  .then (data => dispatch({ type : "FETCH_SUCCESS", payload:data }))
+  .catch (error => dispatch({ type : "FETCH_ERROR",payload:error }));
+
+})
+```
+
+- membuat reducer - nya
+```
+function reducer(state = {loading:false, data:null, error:null}, action){
+switch(action.type){
+  case 'FETCH_SUCCESS':
+    return {loading:false, data:action.payload};
+  case 'FETCH_ERROR':
+    return {loading:false, erorr:action.payload};
+  case 'FETCH_LOADING':
+    return {loading:true};
+default: return state;
+}
+}
+```
