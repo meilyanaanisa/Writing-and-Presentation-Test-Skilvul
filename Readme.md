@@ -22,7 +22,7 @@ Materi yang saya pelajari pada Kampus Merdeka melalui Mitra Skilvul akan di rang
     - Responsive Web Design
     - Bootstrap
 - Minggu Kelima
-    ***tidak ada kegiatan live class, sedang melakukan project group***
+    ***sedang melakukan project group***
 - Minggu Keenam
     mempelajari dasar React.Js
 - Minggu Ketujuh
