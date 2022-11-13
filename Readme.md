@@ -27,6 +27,8 @@ Materi yang saya pelajari pada Kampus Merdeka melalui Mitra Skilvul akan di rang
     mempelajari dasar React.Js
 - Minggu Ketujuh
     mempelajari penggunaan package react.js
+- Minggu Kedelapan
+    mempelajari react-context dan testing
 
 **Keseluruhan setiap rangkuman materi bisa di lihat di setiap folder. Terima Kasih**
 
